@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pongame 5 porfa</title>
+    <link rel="stylesheet" href="../css/third.css" />
+  </head>
+  <body class="body__flex" style="font-family: Arial, sans-serif">
+    <main
+      class="main__flex"
+      style="display: flex; flex-direction: column; align-items: center"
+    >
+      <article
+        class="flex bg-gray"
+        style="display: flex; background: #eee; padding: 20px; margin-top: 20px"
+      >
+        <img
+          src="../media/Andres/hamster.jpg"
+          alt=""
+          style="width: 150px; border-radius: 8px; margin-right: 15px"
+        />
+        <div style="display: flex; flex-direction: column">
+          <h2 style="color: black">
+            Si me pones 5 te prometo que nuestros caminos nunca se volverán a
+            cruzar
+          </h2>
+          <span>este año</span>
+        </div>
+      </article>
+
+      <article
+        class="flex bg-gray"
+        style="margin-top: 30px; background: #eee; padding: 20px"
+      >
+        <h2 style="color: black">
+          Yo te nominé al mejor gestor del conocimiento y no me arrepiento
+        </h2>
+        <img
+          src="../media/Andres/elmejorgestor.jpeg"
+          style="width: 45%; border-radius: 8px"
+          alt=""
+        />
+      </article>
+
+      <article
+        style="
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          margin-top: 30px;
+          justify-content: center;
+        "
+      >
+        <img src="../media/Andres/migajera.gif" style="width: 30%" alt="" />
+        <h2 style="color: black">¿Me va a colocar 5?</h2>
+
+        <!-- Contenedor limitado -->
+        <div
+          id="btn-box"
+          style="
+            display: flex;
+            gap: 10px;
+            position: relative;
+            width: 350px;
+            height: 160px;
+            border: 1px dashed #aaa;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+          "
+        >
+          <a
+            href="/pages/agradecimientos.html"
+            id="btn-si"
+            style="
+              padding: 10px 20px;
+              background: green;
+              color: white;
+              border: none;
+              border-radius: 8px;
+              cursor: pointer;
+              font-size: 16px;
+              position: relative;
+              z-index: 1;
+            "
+          >
+            Sí
+          </a>
+
+          <button
+            id="btn-no"
+            style="
+              padding: 10px 20px;
+              background: red;
+              color: white;
+              border: none;
+              border-radius: 8px;
+              cursor: pointer;
+              font-size: 16px;
+              position: absolute;
+              z-index: 2;
+            "
+          >
+            No
+          </button>
+        </div>
+      </article>
+    </main>
+
+    <script>
+      const btnNo = document.getElementById("btn-no");
+      const box = document.getElementById("btn-box");
+
+      function moverBoton() {
+        const maxX = box.clientWidth - btnNo.offsetWidth - 10;
+        const maxY = box.clientHeight - btnNo.offsetHeight - 10;
+        const newX = Math.random() * maxX;
+        const newY = Math.random() * maxY;
+        btnNo.style.left = newX + "px";
+        btnNo.style.top = newY + "px";
+      }
+
+      btnNo.addEventListener("mouseenter", moverBoton);
+    </script>
+  </body>
+</html>

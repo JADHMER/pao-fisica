@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  box-sizing: border-box;
+  color: white;
+}
+
+.page__back {
+  background-image: url("../media/fondo.jpg");
+  background-size: cover;
+  min-height: 100vh;
+}
+
+header {
+  text-align: center;
+  padding: 1rem;
+}
+
+.main__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.432);
+  border-radius: 15px;
+  width: 70%;
+  margin: auto;
+  padding: 2rem;
+}
+
+.container__content {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 15px;
+}
+
+.container__content-- {
+  margin-top: -55px;
+}
+
+/* CARD */
+
+.flip-card {
+  width: 35%;
+  height: auto;
+  min-height: 300px;
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.flip-inner {
+  width: 90%;
+  height: auto;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.7s ease;
+}
+
+.flip-card.active .flip-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-front,
+.flip-back {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  min-height: 220px;
+  background: white;
+  border-radius: 15px;
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Parte trasera volteada */
+.flip-back {
+  transform: rotateY(180deg);
+}
+
+.flip__title {
+  color: black;
+}
+
+.img__flip {
+  width: 30%;
+}
+
+.flip__description {
+  text-align: center;
+  margin-top: 10px;
+  color: black;
+}
+
+.button--container {
+  width: 90%;
+  margin: auto;
+  margin-top: 20px;
+  text-align: left;
+}
+
+.button--next {
+  padding: 0.5rem 1.5rem;
+  font-weight: bold;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.548);
+}
+
+.w-34 {
+  width: 65% !important;
+}
+
+.container__content--column {
+  flex-direction: column !important;
+}
+
+.w100 {
+  width: 80% !important;
+  margin: auto !important;
+}
+
+.video {
+  width: 60%;
+}
+
+.main--validacion {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex {
+  width: 80%;
+  margin: auto;
+  padding: 3rem;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.flex__img {
+  width: 25% !important;
+}
+
+.bg-gray {
+  background-color: rgb(224, 224, 224);
+}
+
+.main__flex {
+  padding: 3rem;
+}
+
+.body__flex {
+  background-color: pink;
+}
